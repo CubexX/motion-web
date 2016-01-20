@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Motion-web</title>
+	<link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+	<script>
+		window.onload = function() {
+			document.getElementById("broadcast").href = "http://" + window.location.hostname + ":{{ .WebcamPort }}/";
+			document.getElementById("settings").href = "http://" + window.location.hostname + ":{{ .ControlPort }}/";
+	};
+	</script>
+	<div class="content">
+		<div class="header">
+			<h1>Status: <span id="status">...</span></h1>
+			<input type="button" value="Run/stop" onClick="do_motion()">
+
+			<span class="links">
+
+			<a href="http://127.0.0.1:{{ .WebcamPort }}/" target="_blank" id="broadcast">Open broadcast</a>
+			<a href="http://127.0.0.1:{{ .ControlPort }}/" target="_blank" id="settings">Settings</a>
+			</span>
+		</div>
+		<br>
+		{{ .Shots }}
+	</div>
+
+	<script src="/static/js/main.js"></script>
+</body>
+</html>

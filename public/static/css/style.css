@@ -1,0 +1,42 @@
+a {
+	color: #01579B;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #01579B;
+}
+
+a:hover {
+	color: #0091EA;
+}
+
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.shot {
+	width: 170px;
+	border: 2px solid #E0E0E0;
+	margin: 10px 10px 0 0;
+}
+
+.shot:hover {
+	opacity: 0.7;
+}
+
+.content {
+	max-width: 1200px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.links {
+	float: right;
+}
+
+.header {
+	text-align: left;
+}
